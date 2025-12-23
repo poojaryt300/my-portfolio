@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tharun Poojary | Portfolio</title>
+    <style>
+        /* GENERAL RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #f8fafc, #e2e8f0);
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #38bdf8;
+            margin-bottom: 20px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(56, 189, 248, 0.4);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-weight: 400;
+            margin-top: 5px;
+            color: #cbd5f5;
+            font-size: 1.4rem;
+        }
+
+        /* CARD SECTIONS */
+        .card {
+            background: white;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            margin-bottom: 20px;
+            color: #0f172a;
+            font-size: 1.6rem;
+            cursor: default;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skills span {
+            background: linear-gradient(135deg, #bae6fd, #0ea5e9);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .skills span:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
+        }
+
+        /* ACCORDION FOR CERTIFICATES */
+        .accordion {
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s ease;
+            user-select: none;
+        }
+
+        .accordion:hover {
+            color: #0ea5e9;
+        }
+
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .panel li {
+            margin-bottom: 10px;
+            list-style-type: disc;
+            color: #1e293b;
+        }
+
+        /* CONTACT */
+        .contact p {
+            margin: 10px 0;
+        }
+
+        .contact a {
+            color: #0ea5e9;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact a:hover {
+            color: #0369a1;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f172a;
+            color: #cbd5f5;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.95rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+            .card {
+                padding: 20px;
+            }
+            .skills span {
+                padding: 8px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
+    <h1>Tharun Poojary</h1>
+    <h2>Computer Science Engineering Student</h2>
+</header>
+
+<section class="card">
+    <h3>About Me</h3>
+    <p>
+        I am a passionate Computer Science Engineering student with expertise in 
+        programming, web development, and problem-solving. I enjoy building 
+        efficient, user-friendly applications and continuously exploring new technologies. 
+        My goal is to leverage my skills to develop impactful digital solutions.
+    </p>
+</section>
+
+<section class="card">
+    <h3>Skills</h3>
+    <div class="skills">
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>DSA</span>
+        <span>Git & GitHub</span>
+    </div>
+</section>
+
+<section class="card">
+    <h3 class="accordion">Certificates ▼</h3>
+    <div class="panel">
+        <!-- Certificate 1 -->
+        <a href="certificates/python_certificate.pdf" target="_blank">
+            <img src="certificates/python_certificate.png" alt="Python Certificate" style="width:100%; max-width:400px; margin-bottom:10px; border-radius:8px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+        </a>
+        <!-- Certificate 2 -->
+        <a href="01SU24CS229-THARUN.pdf" target="_blank">
+            <img src="data" alt="Web Development Certificate" style="width:100%; max-width:400px; margin-bottom:10px; border-radius:8px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+        </a>
+        <!-- Add more certificates the same way -->
+    </div>
+</section>
+
+
+<section class="card contact">
+    <h3>Contact</h3>
+    <p>📧 Email: <a href="mailto:tharunpoojary31@email.com">tharunpoojary31@email.com</a></p>
+    <p>💻 GitHub: <a href="https://github.com/poojaryt300" target="_blank">github.com/poojaryt300</a></p>
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/tharun-poojary-b89254358" target="_blank">linkedin.com/in/tharun-poojary-b89254358</a></p>
+</section>
+
+<footer>
+    <p>© 2025 Tharun Poojary | All Rights Reserved</p>
+</footer>
+
+<script>
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(acc => {
+        acc.addEventListener('click', () => {
+            const panel = acc.nextElementSibling;
+            if(panel.style.maxHeight){
+                panel.style.maxHeight = null;
+                acc.textContent = acc.textContent.replace('▲','▼');
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                acc.textContent = acc.textContent.replace('▼','▲');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
